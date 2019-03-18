@@ -40,6 +40,12 @@
 			<artifactId>spring-kafka-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		
+		<dependency>
+		<groupId>vn.com.techcombank</groupId>
+		<artifactId>common</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 	<!-- Not required because this plug-in will replace the original jar/war 

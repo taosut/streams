@@ -1,1 +1,4 @@
+vn\com\techcombank\util\serde\StreamsSerdes.class
+vn\com\techcombank\util\serde\WrapperSerde.class
 vn\com\techcombank\model\Message.class
+vn\com\techcombank\util\serde\MessageSerde.class

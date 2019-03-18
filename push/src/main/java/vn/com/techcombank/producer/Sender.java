@@ -5,16 +5,18 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 
+import vn.com.techcombank.model.Message;
+
 public class Sender {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(Sender.class);
 
 	@Autowired
-	private KafkaTemplate<String, String> kafkaTemplate;
+	private KafkaTemplate<String, Message> kafkaTemplate;
 
-	public void send(String payload) {
-		LOGGER.info("sending payload = {}", payload);
-		kafkaTemplate.send("TCB", payload);
+	public void send(Message msg) {
+		LOGGER.info("sending payload = {}", msg.getPayload());
+		kafkaTemplate.send("raw_message", msg);
 	}
 
 }
